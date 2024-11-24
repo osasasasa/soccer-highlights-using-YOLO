@@ -2,7 +2,7 @@ import cv2
 from ultralytics import YOLO
 
 # 学習済みのモデルをロード
-model = YOLO('yolov8n.pt')
+model = YOLO('yolo11n.pt')
 
 # 動画ファイルのパスを指定
 video_path = "../data/soccer.mp4"
@@ -33,7 +33,7 @@ while cap.isOpened():
         out.write(annotated_frame)
 
         # 処理中の画像をウィンドウで表示します
-        cv2.imshow("YOLOv8 Tracking", annotated_frame)
+        cv2.imshow("YOLOv11 Tracking", annotated_frame)
         
         # キーボードが押されたかチェック（1ミリ秒待機）
         key = cv2.waitKey(1)
